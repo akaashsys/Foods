@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QWERTY SHOP</title>
+        <link rel="icon" href="qwertylogo.ico">
+        <style>
+            h2{
+                text-align: right;
+            }
+            form{
+                background-color: rgb(43, 35, 59);
+                color: white;
+
+            }
+            table{
+                background-color: rgb(43, 35, 59);
+                color: white;
+            }
+            input{
+                background-color: orange;
+            }
+        </style>
+        <script>
+            function register(){
+                var id = document.getElementById("txtid").value;
+                var name = document.getElementById("txtname").value;
+                var price = document.getElementById("txtprice").value;
+                var yes = document.getElementById("optyes");
+                var no = document.getElementById("optno");
+                if(yes.checked)
+                stock = yes.value;
+                if(no.checked)
+                stock = no.value;
+                var address = document.getElementById("txtcity").value;
+                
+                
+                document.getElementById("tableid").innerHTML = id;
+                document.getElementById("tablename").innerHTML = name;
+                document.getElementById("tableprice").innerHTML = price;
+                document.getElementById("tableavai").innerHTML = stock;
+                document.getElementById("tableadres").innerHTML = address;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>
+            <img src="Sunrise.jpg" width="50" height="30">
+            QWERTY SHOP
+            <h2>
+                <input type= "button" value = "HOME">
+                <input type= "button" value="CONTACT">
+                <input type= "button" value="ABOUT">
+            </h2>
+            </h1>
+        </header>
+        <div>
+            <form>
+                <fieldset id="showregister">
+                    <legend>REGISTER PRODUCT</legend>
+                    <dl>
+                        <dt>product ID</dt>
+                        <dd><input type="number" id="txtid"></dd>
+                        <dt>product name</dt>
+                        <dd><input type="text" id="txtname"</dd>
+                        <dt> product price</dt>
+                        <dd><input type="number" id="txtprice"</dd>
+                        <dt>manufacture date</dt>
+                        <dd><input type="date" id="txtdate"</dd>
+                        <dt>availability</dt>
+                        <dd><input type="radio" name="stock" value="available" id="optyes">yes
+                            <input type="radio" name="stock" value="out of stock" id="optno">no
+                        </dd>
+                        <dt>shipping address</dt>
+                        <dd><input type="text" id="txtcity"</dd>
+                    </dl>
+                </fieldset>
+            </form>
+        </div>
+        <br>
+        <input type="button" value="submit" onclick="register()">
+        <br>
+        <fieldset id="show details">
+        <legend >PRODUCT DETAILS</legend>
+        
+        <table width="500" border="5" >
+            <tr>
+                <td>product id</td>
+            <td id="tableid"></td>
+        </tr>
+            <tr>
+                <td>product name</td>
+            <td id="tablename"></td>
+        </tr>
+        <tr>
+            <td>price</td>
+            <td id="tableprice"></td>
+        </tr>
+            <tr>
+                <td>availability</td>
+            <td id="tableavai"></td>
+        </tr>
+            <tr>
+                <td>address</td>
+            <td id="tableadres"></td>
+        </tr>
+        </table>
+    </fieldset>
+<br>
+<br>
+    <input type="checkbox" > agree to the terms and conditions
+<br>
+
+
+    </body>
+    <footer>
+        <div>
+            <br>
+            <br>
+            &copy copyrights 2021 
+            <acronym title="Developer">AKAASH</acronym>
+        </div>
+    </footer>
+</html>
